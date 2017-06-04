@@ -1,10 +1,10 @@
-var Webpack = require('webpack')
-var LessPluginAutoPrefix = require('less-plugin-autoprefix')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var CleanCSSPlugin = require('less-plugin-clean-css')
+const Webpack = require('webpack')
+const LessPluginAutoPrefix = require('less-plugin-autoprefix')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CleanCSSPlugin = require('less-plugin-clean-css')
 const OfflinePlugin = require('offline-plugin')
 
-var webpack = {}
+let webpack = {}
 let filename = ''
 let chunkFilename = '[name]-[chunkhash].js'
 if (process.env.NODE_ENV === 'production') {
@@ -23,13 +23,7 @@ if (process.env.NODE_ENV === 'production') {
   filename = '[name].bundle.js'
 }
 
-var path = require('path')
-
-// entry
-webpack.entry = {
-  app: './src/main.js',
-  vendor: [ 'preact', 'semantic-ui-react', 'lodash' ]
-}
+const path = require('path')
 
 webpack.output = {
   path: path.resolve(__dirname, 'build'),
@@ -106,7 +100,7 @@ webpack.plugins.push(
 webpack.resolve = {
   extensions: ['.js'],
   alias: {
-    'react': 'preact-compat',
+    'react': path.resolve(__dirname,'react.js'),
     'react-dom': 'preact-compat'
   }
 }

@@ -34,6 +34,9 @@
         }
       ],
       "react"
+    ],
+    "plugins": [
+      "react-hot-loader/babel"
     ]
   },
   "dependencies": {
@@ -89,6 +92,7 @@
     "plop": "1.7.4",
     "postcss-loader": "2.0.5",
     "prettier": "1.3.1",
+    "react-hot-loader": "next",
     "redux-devtools": "3.4.0",
     "redux-logger": "3.0.6",
     "semantic-ui-less": "2.2.10",
