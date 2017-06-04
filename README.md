@@ -1,6 +1,6 @@
 # Preact Sandbox
 
-A custom made boilerplate to only include the minimal set of features that is relevent (at least to me) to setup a small-medium size project
+A custom made react-sandbox to only include the minimal set of features that is relevent (at least to me) to setup a small-medium size project
 
 # Features
 
@@ -20,7 +20,7 @@ Official Website: [Redux](http://redux.js.org)
 
 An async _redux_ middleware.
 
-_I was originally going for *redux_saga* but given that this boilerplate is for small-medium projects, I decided to go with the simpler async callers._
+_I was originally going for *redux_saga* but given that this sandbox is for small-medium projects, I decided to go with the simpler async callers._
 
 Official Website: [Redux Thunk](https://github.com/gaearon/redux-thunk)
 
@@ -72,4 +72,4 @@ Script: `yarn run generate`
 
 ## Author Notes
 
-This sandbox is merely a way for me to understand on react-boiler plates work. Also give me the capability to make custom-tailored toolset, or edit exisiting toolset in future projects. Anyone is free to use this if they understand how this sandbox work.
+This sandbox is merely a way for me to understand on react-boilerplates work. Also give me the capability to make custom-tailored toolset, or edit exisiting toolset in future projects. Anyone is free to use this if they understand how this sandbox work.
