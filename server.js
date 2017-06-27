@@ -3,6 +3,8 @@ const expressStaticGzip = require('express-static-gzip')
 const express = require('express')
 const app = express()
 
+app.set('port', (process.env.PORT || 3333))
+
 // serve compress js/css files for bandwidth saving
 app.use('/', expressStaticGzip('./build', {
   enableBrotli: true
@@ -11,6 +13,6 @@ app.use('/', expressStaticGzip('./build', {
 app.use(express.static('build'))
 app.use(fallback('index.html', { root: 'build' }))
 
-app.listen(3100, () => {
-  console.log(`http://localhost:3100`)
+app.listen(app.get('port'), () => {
+  console.log(`http://localhost:${app.set('port')}`)
 })
